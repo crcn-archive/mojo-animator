@@ -1,0 +1,27 @@
+{
+  "name": "mojo-animator",
+  "version": "0.0.1",
+  "description": "mojo-animator =============",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "mocha ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/classdojo/mojo-animator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/classdojo/mojo-animator/issues"
+  },
+  "homepage": "https://github.com/classdojo/mojo-animator",
+  "dependencies": {
+    "protoclass": "0.0.5"
+  },
+  "devDependencies": {
+    "mocha": "1.20.1",
+    "expect.js": "0.3.1",
+    "mojo-application": "0.0.x"
+  }
+}
