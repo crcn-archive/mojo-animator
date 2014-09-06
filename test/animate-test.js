@@ -43,5 +43,43 @@ describe("animate#", function () {
     delete global["requestAnimationFrame"];
   });
 
+  it("runs animations proceduraly", function (next) {
+
+      var app = new Application();
+      var i = 0;
+
+      global.requestAnimationFrame = function (next) {
+        setTimeout(next, 0);
+      }
+
+      app.use(animator);
+      process.browser = 1;
+      app.animate({
+        update: function () {
+          i++;
+          expect(i).to.be(1);
+          app.animate({
+            update: function () {
+              i++;
+              expect(i).to.be(2);
+            }
+          })
+        }
+      });
+
+      app.animate({
+        update: function () {
+          i++;
+          expect(i).to.be(3);
+        }
+      });
+
+
+      setTimeout(function () {
+        expect(i).to.be(3);
+        next();
+      }, 10);
+  });
+
 
 });

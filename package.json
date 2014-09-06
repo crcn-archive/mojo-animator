@@ -1,6 +1,6 @@
 {
   "name": "mojo-animator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "mojo-animator =============",
   "main": "./lib/index.js",
   "scripts": {
