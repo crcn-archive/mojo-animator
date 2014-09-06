@@ -43,7 +43,7 @@ describe("animate#", function () {
     delete global["requestAnimationFrame"];
   });
 
-  it("runs animations proceduraly", function (next) {
+  it("runs animations procedurally", function (next) {
 
       var app = new Application();
       var i = 0;
